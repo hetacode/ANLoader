@@ -63,7 +63,7 @@ public struct ANLoader {
     }
     
     public static func hide(){
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
             instance?.hideActivity()
         }
     }
